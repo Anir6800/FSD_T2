@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors & Priority Demo</title>
+
+  <style>
+    /* 🔹 Universal Selector (lowest priority) */
+    * {
+      color: gray;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* 🔹 Element Selector */
+    p {
+      color: green;
+    }
+
+    /* 🔹 Class Selector */
+    .highlight {
+      color: blue;
+      font-weight: bold;
+    }
+
+    /* 🔹 Attribute Selector */
+    input[type="text"] {
+      border: 2px solid purple;
+      color: purple;
+    }
+
+    /* 🔹 Descendant Selector */
+    div p {
+      color: teal;
+    }
+
+    /* 🔹 Child Selector */
+    div > span {
+      color: orange;
+      font-style: italic;
+    }
+
+    /* 🔹 Grouping Selector */
+    h1, h2, h3 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* 🔹 ID Selector */
+    #unique {
+      color: red;
+      text-decoration: underline;
+    }
+
+    /* 🔹 Inline Style (highest priority except !important) */
+    /* Demonstrated below in HTML */
+
+    /* 🔹 !important Example */
+    .force {
+      color: gold !important;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="unique">Welcome to GATE - Pre and Manager</h1>
+  <h2>Selectors Example</h2>
+  <h3>Priority Demo</h3>
+
+  <!-- Element, Class, and Descendant Selectors -->
+  <div>
+    <p>This is a normal paragraph inside div (descendant selector).</p>
+    <p class="highlight">This is a class selector example (blue & bold).</p>
+    <span>This is a child span inside div (orange text).</span>
+    <div>
+      <span>This nested span won’t be styled by the child selector.</span>
+    </div>
+  </div>
+
+  <!-- Attribute Selector -->
+  <input type="text" placeholder="Type your name here">
+
+  <!-- Inline CSS (highest priority except !important) -->
+  <p style="color: brown;">This is an inline styled paragraph (brown text).</p>
+
+  <!-- !important Example -->
+  <p class="force">This paragraph uses !important (gold text wins all).</p>
+</body>
+</html>
