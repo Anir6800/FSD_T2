@@ -1,0 +1,185 @@
+<!-- Background Properties (Full Demonstration Without Iframes) -->
+<!-- Includes: color, image, repeat, position, size, attachment, clip, origin, blend-mode, shorthand -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Background Properties - Full Demo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1b2a;
+      color: #f4f4f4;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+      color: #f4f4f4;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      margin: 25px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      overflow: hidden;
+      background-color: #162a45;
+      text-align: left;
+    }
+
+    .preview {
+      height: 180px;
+      border-radius: 10px;
+      border: 2px solid #2b4865;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #ffe066;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Each background example */
+    .bg-color {
+      background-color: lightseagreen;
+    }
+
+    .bg-image {
+      background-image: url('image.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .bg-repeat {
+      background-image: url('image.png');
+      background-repeat: repeat-x;
+      background-color: #244b6b;
+    }
+
+    .bg-position {
+      background-image: url('image.png');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-color: #002b5c;
+    }
+
+    .bg-size {
+      background-image: url('image.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-color: #14324c;
+    }
+
+    .bg-attachment {
+      background-image: url('image.png');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .bg-clip {
+      background-image: url('image.png');
+      border: 10px dotted #fff;
+      padding: 20px;
+      background-clip: content-box;
+      background-size: cover;
+    }
+
+    .bg-origin {
+      border: 10px solid white;
+      padding: 30px;
+      background-image: url('image.png');
+      background-repeat: no-repeat;
+      background-origin: content-box;
+    }
+
+    .bg-blend {
+      background-image: url('image.png'), linear-gradient(45deg, #ff6a00, #ee0979);
+      background-blend-mode: multiply;
+      background-size: cover;
+    }
+
+    .bg-shorthand {
+      background: url('image.png') no-repeat center/cover fixed #224d73;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎨 CSS Background Properties Showcase</h1>
+  <p>Each section below demonstrates a different background property using <strong>image.png</strong>.</p>
+
+  <div class="card">
+    <h2>1. background-color</h2>
+    <p>Sets the background color of an element.</p>
+    <div class="preview bg-color"></div>
+  </div>
+
+  <div class="card">
+    <h2>2. background-image</h2>
+    <p>Sets one or more background images for an element.</p>
+    <div class="preview bg-image"></div>
+  </div>
+
+  <div class="card">
+    <h2>3. background-repeat</h2>
+    <p>Controls how background images are repeated — horizontally, vertically, or not at all.</p>
+    <div class="preview bg-repeat"></div>
+  </div>
+
+  <div class="card">
+    <h2>4. background-position</h2>
+    <p>Defines the starting position of a background image.</p>
+    <div class="preview bg-position"></div>
+  </div>
+
+  <div class="card">
+    <h2>5. background-size</h2>
+    <p>Specifies the size of the background image (cover, contain, or custom size).</p>
+    <div class="preview bg-size"></div>
+  </div>
+
+  <div class="card">
+    <h2>6. background-attachment</h2>
+    <p>Determines if the background scrolls with the page or stays fixed.</p>
+    <div class="preview bg-attachment"></div>
+  </div>
+
+  <div class="card">
+    <h2>7. background-clip</h2>
+    <p>Defines how far the background extends within the element — border-box, padding-box, or content-box.</p>
+    <div class="preview bg-clip"></div>
+  </div>
+
+  <div class="card">
+    <h2>8. background-origin</h2>
+    <p>Specifies the origin position of the background image — from border-box, padding-box, or content-box.</p>
+    <div class="preview bg-origin"></div>
+  </div>
+
+  <div class="card">
+    <h2>9. background-blend-mode</h2>
+    <p>Specifies how multiple backgrounds (image + color/gradient) blend together.</p>
+    <div class="preview bg-blend"></div>
+  </div>
+
+  <div class="card">
+    <h2>10. background (shorthand)</h2>
+    <p>Allows setting all background properties in a single line.</p>
+    <div class="preview bg-shorthand"></div>
+  </div>
+
+</body>
+</html>

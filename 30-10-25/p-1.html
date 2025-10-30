@@ -1,0 +1,39 @@
+<!--CSS Specification (priority Order)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Specification Priority Order</title>
+  <style>
+    /* 1. User Agent Stylesheet (browser default) */
+    body {
+      font-family: Arial, sans-serif;
+      color: black;
+    }
+
+    /* 2. External CSS */
+    .external-style {
+      color: blue;
+    }
+
+    /* 3. Internal CSS */
+    .internal-style {
+      color: green;
+    }
+
+    /* 4. Inline CSS */
+    /* Demonstrated in HTML element below */
+
+    /* 5. !important Rule */
+    .important-style {
+      color: red !important;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="external-style">External CSS Example</h1>
+  <h1 class="internal-style">Internal CSS Example</h1>
+  <h1 class="important-style">Important CSS Example</h1>
+</body>
+</html>
