@@ -1,0 +1,38 @@
+<!--WAP TO DISPLAY UNORDERED LIST WHERE ITS SECOND LIST ITEM WITH RED TEST AND BOLD FONTS 
+ ONE OF THE LIST ITEM HAS CLASS NAME SPECIAL AND ALL OTHER LIST ITEM HAVE BG COLOR  AQUA AND FONT STYLE ITALIC -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Unordered List</title>
+  <style>
+    ul li {
+      background-color: aqua;
+      font-style: italic;
+      padding: 5px;
+      margin: 3px 0;
+    }
+    ul li:nth-child(2) {
+      color: red;
+      font-weight: bold;
+    }
+    ul li.special {
+      background-color: transparent;
+      font-style: normal;
+      color: black;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+    <h1>Styled Unordered List</h1>
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li class="special">Special Item</li>
+        <li>Fourth Item</li>
+        <li>Fifth Item</li>
+    </ul>
+</body>
+</html>
