@@ -3,36 +3,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Styled Unordered List</title>
-  <style>
-    ul li {
-      background-color: aqua;
-      font-style: italic;
-      padding: 5px;
-      margin: 3px 0;
-    }
-    ul li:nth-child(2) {
-      color: red;
-      font-weight: bold;
-    }
-    ul li.special {
-      background-color: transparent;
-      font-style: normal;
-      color: black;
-      font-weight: normal;
-    }
-  </style>
+<meta charset="UTF-8" />
+<title>Styled Unordered List</title>
+<style>
+  ul li {
+    background-color: aqua;
+    font-style: italic;
+  }
+  ul li:nth-child(2) {
+    color: red;
+    font-weight: bold;
+    background-color: initial; /* Remove aqua bg for second item */
+    font-style: normal;       /* Override italic font */
+  }
+  ul li.special {
+    /* Styles for the special class item */
+    background-color: initial; /* Remove aqua bg */
+    font-style: normal;        /* Override italic font */
+  }
+</style>
 </head>
 <body>
-    <h1>Styled Unordered List</h1>
-    <ul>
-        <li>First Item</li>
-        <li>Second Item</li>
-        <li class="special">Special Item</li>
-        <li>Fourth Item</li>
-        <li>Fifth Item</li>
-    </ul>
+  <ul>
+    <li>First item</li>
+    <li>Second item</li>
+    <li class="special">Special item</li>
+    <li>Fourth item</li>
+    <li>Fifth item</li>
+  </ul>
 </body>
 </html>
