@@ -1,0 +1,191 @@
+<!-- CSS Pseudo Classes Example -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Pseudo Classes Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 15px;
+      background: #fafafa;
+      border-left: 5px solid #3498db;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* 1️⃣ User Action Pseudo Classes */
+    a:hover {
+      color: crimson;
+      text-decoration: underline;
+    }
+    a:active {
+      color: darkorange;
+    }
+    a:visited {
+      color: purple;
+    }
+    input:focus {
+      border: 2px solid #3498db;
+      outline: none;
+    }
+
+    /* 2️⃣ Structural Pseudo Classes */
+    ul li:first-child {
+      color: #16a085;
+      font-weight: bold;
+    }
+    ul li:last-child {
+      color: #c0392b;
+    }
+    ul li:nth-child(odd) {
+      background: #ecf0f1;
+    }
+    ul li:nth-of-type(3) {
+      background: #f9e79f;
+    }
+    p:only-child {
+      color: #8e44ad;
+      font-style: italic;
+    }
+
+    /* 3️⃣ Form Pseudo Classes */
+    input:enabled {
+      background: #eafaf1;
+    }
+    input:disabled {
+      background: #f2d7d5;
+    }
+    input:checked + label {
+      color: #27ae60;
+      font-weight: bold;
+    }
+    input:required {
+      border: 2px dashed #e67e22;
+    }
+    input:optional {
+      border: 2px solid #95a5a6;
+    }
+    input:valid {
+      background-color: #d5f5e3;
+    }
+    input:invalid {
+      background-color: #f9d6d5;
+    }
+    input:in-range {
+      background-color: #d4efdf;
+    }
+    input:out-of-range {
+      background-color: #f5b7b1;
+    }
+
+    /* 4️⃣ Negation and Target */
+    p:not(.special) {
+      color: #2c3e50;
+    }
+    p.special {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+    :target {
+      background: #d6eaf8;
+      border-left: 5px solid #3498db;
+    }
+
+    /* 5️⃣ Miscellaneous and Root */
+    :root {
+      --main-color: #2980b9;
+    }
+    div:lang(en) {
+      border: 2px solid var(--main-color);
+      padding: 10px;
+    }
+    section:is(.form-section, .list-section) {
+      border-color: #8e44ad;
+    }
+    section:where(.demo-section) {
+      background: #fcfcfc;
+    }
+    div:has(input:checked) {
+      border: 2px solid #2ecc71;
+      background: #eafaf1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Pseudo Classes Demonstration</h1>
+
+  <!-- User Action -->
+  <section>
+    <h2>1️⃣ User Action Pseudo Classes</h2>
+    <p><a href="#example1">Hover, Visit, Click Me</a></p>
+    <input type="text" placeholder="Focus on me">
+  </section>
+
+  <!-- Structural -->
+  <section class="list-section">
+    <h2>2️⃣ Structural Pseudo Classes</h2>
+    <ul>
+      <li>First Item</li>
+      <li>Second Item</li>
+      <li>Third Item</li>
+      <li>Fourth Item</li>
+    </ul>
+    <div>
+      <p>This is the only paragraph (only-child example)</p>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="form-section">
+    <h2>3️⃣ Form Pseudo Classes</h2>
+    <input type="text" required placeholder="Required Field"><br><br>
+    <input type="text" placeholder="Optional Field"><br><br>
+    <input type="number" min="1" max="10" value="5"><br><br>
+    <input type="number" min="1" max="10" value="20"><br><br>
+    <input type="checkbox" checked id="check1"><label for="check1"> Checked Option</label><br><br>
+    <input type="text" value="enabled input">
+    <input type="text" value="disabled input" disabled>
+  </section>
+
+  <!-- Negation and Target -->
+  <section class="demo-section">
+    <h2>4️⃣ Negation and Target</h2>
+    <p>This paragraph is normal.</p>
+    <p class="special">This paragraph is special (styled using :not).</p>
+    <a href="#target-demo">Go to Target Example</a>
+    <p id="target-demo">This is the target paragraph.</p>
+  </section>
+
+  <!-- Miscellaneous -->
+  <section>
+    <h2>5️⃣ Miscellaneous Pseudo Classes</h2>
+    <div lang="en">This div uses :lang(en).</div>
+    <div>
+      <input type="checkbox" checked> This div uses :has() to detect checked input.
+    </div>
+  </section>
+
+</body>
+</html>
