@@ -1,0 +1,46 @@
+<!--Flex Container-->
+<!-- display : flex, in-line-flex 
+flex-direction : row, row-reverse, column, column-reverse
+justify-content : flex-start, flex-end, center, space-between, space-around, space-evenly
+align-items : flex-start, flex-end, center, baseline, stretch 
+flex-wrap : nowrap, wrap, wrap-reverse
+gap : px, em, %
+order : 0, positive-integer, negative-integer
+-->
+<html>
+<head>
+    <title>Flex Container Example</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .flex-item {
+            background-color: lightcoral;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid darkred;
+            order: 0; /* Default order */
+        }
+
+        .flex-item.special {
+            order: -1; /* This item will appear first */
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item special">Item 2 (Special)</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+</body>
+</html>
