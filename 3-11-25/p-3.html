@@ -1,0 +1,44 @@
+<!--Grid Properties-->
+<!-- grid-template-rows 
+ grid-template-columns
+grid-row
+grid-column
+grid-area
+gap
+row-gap
+column-gap
+-->
+<html>
+<head>
+    <title>Grid Layout Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-rows: 100px 100px;
+            grid-template-columns: 150px 150px 150px;
+            gap: 10px;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background-color: lightcoral;
+            padding: 20px;
+            border: 2px solid darkred;
+        }
+
+        .grid-item.special {
+            grid-row: 1 / span 2; /* Spans two rows */
+            grid-column: 2 / span 2; /* Spans two columns */
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item special">Item 2 (Special)</div>
+        <div class="grid-item">Item 3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>CSS Positioning Example with z-index</title>
+    <style>
+        body {
+            height: 2000px; /* Added height to demonstrate sticky/fixed */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .static-box {
+            position: static;
+            background-color: lightblue;
+            padding: 20px;
+            margin: 10px;
+            z-index: 0; /* default layer */
+        }
+
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: lightgreen;
+            padding: 20px;
+            margin: 10px;
+            z-index: 1; /* above static */
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 100px;
+            left: 300px;
+            background-color: lightcoral;
+            padding: 20px;
+            margin: 10px;
+            z-index: 3; /* highest layer */
+        }
+
+        .fixed-box {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: lightgoldenrodyellow;
+            padding: 20px;
+            margin: 10px;
+            z-index: 2; /* appears above relative/static */
+        }
+
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background-color: lightpink;
+            padding: 20px;
+            margin: 10px;
+            z-index: 4; /* stays on top when scrolling */
+        }
+    </style>
+</head>
+<body>
+    <div class="static-box">Static Box (z-index: 0)</div>
+    <div class="relative-box">Relative Box (z-index: 1)</div>
+    <div class="absolute-box">Absolute Box (z-index: 3)</div>
+    <div class="fixed-box">Fixed Box (z-index: 2)</div>
+    <div class="sticky-box">Sticky Box (z-index: 4)</div>
+</body>
+</html>
