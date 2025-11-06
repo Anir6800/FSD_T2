@@ -1,0 +1,22 @@
+<!--flip an image when hover -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Image Example</title>
+    <style>
+        .flip-horizontal:hover {
+            transform: scaleX(-1);
+        }
+        .flip-vertical:hover {
+            transform: scaleY(-1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Flip Image Example</h1>
+    <h2>Horizontal Flip</h2>
+    <img src="image.png" height="500" alt="Horizontal Flip" class="flip-horizontal">
+    <h2>Vertical Flip</h2>
+    <img src="image.png" height="100"  alt="Vertical Flip" class="flip-vertical">
