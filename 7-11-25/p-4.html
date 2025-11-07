@@ -1,0 +1,41 @@
+<!--Css Gradient -->
+<!-- linear, radial, conic , to bottom , to top , to left , to right -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradients Example</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #ff7e5f , #feb47b);
+        }
+
+        .radial-gradient {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #43cea2 10%, #185a9d);
+            border-radius: 50%;
+        }
+
+        .conic-gradient {
+            width: 200px;
+            height: 200px;
+            background: conic-gradient(from 0deg, #f7971e 50%, #ffd200 20%, #f7971e 30%);
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to CSS Gradients!</h1>
+    <div class="linear-gradient"></div>
+    <div class="radial-gradient"></div>
+    <div class="conic-gradient"></div>
+</body>
+</html>

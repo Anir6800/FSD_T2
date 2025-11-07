@@ -1,0 +1,28 @@
+<!-- Animation ball scale and shrink in w path -->
+<html>
+<head>
+    <title>Animation ball scale and shrink in w path</title>
+    <style>
+        .path {
+            fill: none;
+            stroke: #000;
+            stroke-width: 2;
+        }
+
+        .ball {
+            fill: #ff5733;
+            r: 10;
+            transform-origin: center;
+            animation: scaleShrink 2s infinite;
+        }
+
+        @keyframes scaleShrink {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.5);
+            }
+        }
+    </style>
+</html>
