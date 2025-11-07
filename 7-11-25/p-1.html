@@ -1,0 +1,132 @@
+<!-- Css animation -->
+<!-- Animation name , duration , delay , timing-function(linear , ease , ease-in-out , ease-in ,ease-out) , iteration-count(number, infinite) , direction(normal, reverse, alternate) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Properties Examples</title>
+    <style>
+        /* Example 1: Animation Name */
+        .box-name {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: changeColor;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes changeColor {
+            from { background-color: red; }
+            to { background-color: blue; }
+        }
+
+        /* Example 2: Animation Duration */
+        .box-duration {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            animation-name: stretch;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes stretch {
+            from { width: 100px; }
+            to { width: 300px; }
+        }
+
+        /* Example 3: Animation Delay */
+        .box-delay {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Example 4: Animation Timing Function */
+        .box-timing {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: relative;
+            animation: slide 3s ease-in-out infinite;
+        }
+        @keyframes slide {
+            0% { left: 0; }
+            100% { left: 200px; }
+        }
+
+        /* Example 5: Animation Iteration Count */
+        .box-iteration {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Example 6: Animation Direction */
+        .box-direction {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: relative;
+            animation: bounce 2s alternate infinite;
+        }
+        @keyframes bounce {
+            from { top: 0px; }
+            to { top: 200px; }
+        }
+
+        .container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animation Properties Examples</h1>
+
+    <div class="container">
+        <h2>1. Animation Name</h2>
+        <div class="box-name"></div>
+    </div>
+
+    <div class="container">
+        <h2>2. Animation Duration</h2>
+        <div class="box-duration"></div>
+    </div>
+
+    <div class="container">
+        <h2>3. Animation Delay</h2>
+        <div class="box-delay"></div>
+    </div>
+
+    <div class="container">
+        <h2>4. Animation Timing Function</h2>
+        <div class="box-timing"></div>
+    </div>
+
+    <div class="container">
+        <h2>5. Animation Iteration Count</h2>
+        <div class="box-iteration"></div>
+    </div>
+
+    <div class="container">
+        <h2>6. Animation Direction</h2>
+        <div class="box-direction"></div>
+    </div>
+</body>
+</html>
