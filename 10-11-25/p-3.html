@@ -1,0 +1,174 @@
+<!-- View-Port and Media Query-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Enhanced Viewport and Media Query Example (All features)</title>
+    <style>
+        :root {
+            --primary-color: steelblue;
+            --text-color: white;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            transition: all 0.2s ease;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+        }
+
+        .box {
+            width: 50vw;
+            height: 50vh;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            transition: all 0.2s ease;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 0 auto;
+        }
+
+        .box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 600px) {
+            .box { background-color: tomato; width: 90vw; height: 40vh; font-size: 1.5rem; }
+            body { padding: 10px; }
+        }
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .box { background-color: seagreen; width: 70vw; height: 50vh; }
+        }
+
+        @media (orientation: landscape) {
+            body { background-color: #e0e0e0; }
+            .box { height: 60vh; }
+        }
+        @media (orientation: portrait) {
+            .box { height: 55vh; }
+        }
+
+        @media (aspect-ratio: 16/9) {
+            .box { border: 4px solid lightcoral; }
+        }
+        @media (min-aspect-ratio: 3/2) {
+            .box { border-style: dashed; }
+        }
+        @media (max-aspect-ratio: 4/3) {
+            .box { border-style: dotted; }
+        }
+
+        @media (device-width: 375px) {
+            .box { font-size: 1.25rem; }
+        }
+        @media (device-height: 812px) {
+            .box { padding: 6px; }
+        }
+
+        @media (min-resolution: 2dppx) {
+            .box { box-shadow: 0 8px 16px rgba(0,0,0,0.25); }
+        }
+        @media (max-resolution: 150dpi) {
+            .box { filter: grayscale(0.05); }
+        }
+
+        @media (color) {
+        }
+        @media (min-color: 8) {
+            .box { outline: 3px solid rgba(255,255,255,0.08); }
+        }
+        @media (color-index: 2) {
+            .box { opacity: 0.95; }
+        }
+        @media (monochrome) {
+            .box { background: #666; color: #eee; }
+        }
+        @media (inverted-colors: inverted) {
+            .box { filter: invert(1); }
+        }
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #222; }
+            h1 { color: #fff; }
+            .box { box-shadow: none; }
+        }
+
+        @media (prefers-contrast: more) {
+            .box { box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+        }
+        @media (prefers-contrast: less) {
+            .box { box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .box, body { transition: none !important; animation: none !important; transform: none !important; }
+        }
+        @media (prefers-reduced-transparency: reduce) {
+            .box { background-color: rgba(70,130,180,0.95); }
+        }
+
+        @media (hover: hover) {
+            .box:hover { transform: scale(1.04); }
+        }
+        @media (hover: none) {
+            .box:hover { transform: none; }
+        }
+        @media (pointer: fine) {
+            .box { border-width: 3px; }
+        }
+        @media (pointer: coarse) {
+            .box { border-width: 1px; }
+        }
+        @media (any-hover: hover) {
+        }
+        @media (any-pointer: coarse) {
+        }
+
+        @media (light-level: dim) {
+            body { background-color: #111; color: #ddd; }
+        }
+        @media (light-level: washed) {
+            .box { border: 3px solid #fff; }
+        }
+
+        @media (display-mode: fullscreen) {
+            body { padding: 0; }
+            .box { width: 100vw; height: 100vh; border-radius: 0; }
+        }
+
+        @media (forced-colors: active) {
+            .box { forced-color-adjust: none; border: 2px solid WindowText; background: ButtonFace; color: ButtonText; }
+        }
+
+        @media (update: fast) { }
+        @media (update: slow) { }
+
+        @media print {
+            .box { border: 2px solid black; background-color: white !important; color: black !important; width: 100%; height: auto; box-shadow: none; }
+            body { padding: 0; background: #fff; }
+        }
+
+        @media (prefers-reduced-motion: reduce), (prefers-contrast: more) {
+            .box { transform: none; box-shadow: 0 8px 16px rgba(0,0,0,0.35); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Design Demo — All Media Features</h1>
+    <div class="box">
+        <p>Responsive Box</p>
+    </div>
+</body>
+</html>
